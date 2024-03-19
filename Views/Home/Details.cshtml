@@ -1,0 +1,76 @@
+@model EmployeeVacation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VDateFrom)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.VDateFrom)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VDateTo)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.VDateTo)
+        </dd>
+
+        <dt class="col-sm-2 text-danger">
+            @Html.DisplayNameFor(model => model.CountedDays)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.CountedDays)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.SubmissionDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Returning)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning">
+            @Html.DisplayFor(model => model.Returning)
+        </dd>
+        <dt class="col-sm-2 text-info">
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+        <dd class="col-sm-10 btn-outline-warning" >
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a class="btn btn-light" asp-action="AllEmolyeesVacation">Back to List</a>
+</div>
