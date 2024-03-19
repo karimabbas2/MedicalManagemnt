@@ -23,60 +23,68 @@
     </div>
 }
 
-
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">
-                #
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.SubmissionDate)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.Department)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.VDateFrom)
-            </th>
-            <th scope="col">
-                @Html.DisplayNameFor(model => model.VDateTo)
-            </th>
-            <th scope="col">
-                More Info
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.Raw(x = x + 1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SubmissionDate)
-                </td>
-                <td scope="row">
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td scope="row">
-                    @Html.DisplayFor(modelItem => item.Department)
-                </td>
-                <td scope="row">
-                    @Html.DisplayFor(modelItem => item.VDateFrom)
-                </td>
-                <td scope="row">
-                    @Html.DisplayFor(modelItem => item.VDateTo)
-                </td>
-
-                <td>
-                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                </td>
+                <th scope="col">
+                    #
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.SubmissionDate)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Department)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.VDateFrom)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.VDateTo)
+                </th>
+                <th scope="col">
+                    More Info
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.Raw(x = x + 1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubmissionDate)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Department)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.VDateFrom)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.VDateTo)
+                    </td>
+
+                    <td>
+                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+}
+else
+{
+    <div>No Vacations</div>
+}

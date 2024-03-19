@@ -10,13 +10,11 @@ namespace TechnoManagment.Helper
         public static DateOnly Calculate(DateTime dateOnly)
         {
             var dayName = dateOnly.DayOfWeek;
-            switch (dayName)
+            return dayName switch
             {
-                case DayOfWeek.Thursday:
-                    return DateOnly.FromDateTime(dateOnly.AddDays(3));
-                default:
-                    return DateOnly.FromDateTime(dateOnly);
-            }
+                DayOfWeek.Thursday => DateOnly.FromDateTime(dateOnly.AddDays(3)),
+                _ => DateOnly.FromDateTime(dateOnly),
+            };
         }
     }
 }

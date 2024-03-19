@@ -250,3 +250,4 @@ C:\Users\20115\Desktop\TechnoManagment\obj\Debug\net8.0\refint\TechnoManagment.d
 C:\Users\20115\Desktop\TechnoManagment\obj\Debug\net8.0\TechnoManagment.pdb
 c:\Users\20115\Desktop\TechnoManagment\obj\Debug\net8.0\TechnoManagment.genruntimeconfig.cache
 c:\Users\20115\Desktop\TechnoManagment\obj\Debug\net8.0\ref\TechnoManagment.dll
+c:\Users\20115\Desktop\TechnoManagment\obj\Debug\net8.0\TechnoManagment.sourcelink.json
